@@ -20,5 +20,6 @@
     state: restarted
   with_items:
     - { name: "snapd" }
+    - { name: "snapd.socket" }
   changed_when: false
   ignore_errors: true

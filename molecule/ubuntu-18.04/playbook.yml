@@ -18,7 +18,6 @@
   remote_user: root
   become: true
   roles:
-    - role: bootstrap
     - role: snapd
 
 - hosts: all
@@ -27,8 +26,11 @@
   tasks:
     - name: start service
       service:
-        name: snapd
+        name: "{{ item.name }}"
         state: started
+      with_items:
+        - { name: "snapd" }
+        - { name: "snapd.socket" }
       changed_when: false
       ignore_errors: true
 
