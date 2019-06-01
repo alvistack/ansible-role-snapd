@@ -15,7 +15,13 @@
 # limitations under the License.
 
 _zypper_repository: [
-  { state: "present", name: "snappy", repo: "https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.0" },
+  {
+    name: "snappy",
+    repo: "https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.0",
+    auto_import_keys: true,
+    autorefresh: true,
+    state: "present",
+  },
 ]
 _zypper: [
   { state: "latest", name: "fuse" },
