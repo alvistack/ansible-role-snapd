@@ -17,6 +17,5 @@
 _apt: [
   { state: "latest", name: "fuse" },
   { state: "latest", name: "squashfuse" },
-  { state: "latest", name: "squashfs-tools" },
   { state: "latest", name: "snapd" },
 ]

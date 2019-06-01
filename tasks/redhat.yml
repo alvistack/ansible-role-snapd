@@ -14,6 +14,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+- name: yum-config-manager --add-repo
+  yum:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+  with_items: "{{ _yum_repository }}"
+  register: result
+  until: result is succeeded
+  changed_when: false
+  ignore_errors: true
+  tags: snapd
+
 - name: yum install
   yum:
     name: "{{ item.name }}"
