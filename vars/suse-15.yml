@@ -18,8 +18,6 @@ _zypper_repository: [
   {
     name: "snappy",
     repo: "https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.0",
-    auto_import_keys: true,
-    autorefresh: true,
     state: "present",
   },
 ]
