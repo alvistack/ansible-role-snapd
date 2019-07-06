@@ -56,7 +56,7 @@
   service:
     name: "{{ item.name }}"
     enabled: true
-  with_items:
+  loop:
     - { name: "snapd" }
     - { name: "snapd.socket" }
   changed_when: false
