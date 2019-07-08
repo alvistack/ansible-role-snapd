@@ -28,7 +28,7 @@
       service:
         name: "{{ item.name }}"
         state: started
-      with_items:
+      loop:
         - { name: "snapd" }
         - { name: "snapd.socket" }
       changed_when: false
