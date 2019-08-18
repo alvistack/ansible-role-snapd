@@ -27,7 +27,7 @@
     - name: start service
       service:
         name: "{{ item.name }}"
-        state: started
+        state: "started"
       loop:
         - { name: "snapd" }
         - { name: "snapd.socket" }
