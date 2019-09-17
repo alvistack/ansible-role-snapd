@@ -16,7 +16,7 @@
 
 _zypper_repository: [
   {
-    name: "snappy",
+    name: "system:snappy",
     repo: "https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.0",
     state: "present",
   },
