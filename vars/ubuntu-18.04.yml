@@ -14,8 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_apt: [
-  { state: "latest", name: "fuse" },
-  { state: "latest", name: "squashfuse" },
-  { state: "latest", name: "snapd" },
-]
+_apt:
+  - { state: "latest", name: "fuse" }
+  - { state: "latest", name: "squashfuse" }
+  - { state: "latest", name: "snapd" }
