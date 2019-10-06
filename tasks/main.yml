@@ -48,10 +48,6 @@
   ignore_errors: true
   tags: snapd
 
-- name: flush handlers
-  meta: flush_handlers
-  tags: snapd
-
 - name: enable service
   service:
     name: "{{ item.name }}"
@@ -61,4 +57,8 @@
     - { name: "snapd.socket" }
   changed_when: false
   ignore_errors: true
+  tags: snapd
+
+- name: flush handlers
+  meta: flush_handlers
   tags: snapd

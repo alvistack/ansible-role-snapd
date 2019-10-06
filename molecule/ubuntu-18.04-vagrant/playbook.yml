@@ -14,12 +14,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_zypper_repository:
-  - name: "system:snappy"
-    repo: "https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.1"
-    state: "present"
+- hosts: all
+  remote_user: root
+  become: true
+  roles:
+    - role: snapd
 
-_zypper:
-  - { state: "latest", name: "fuse" }
-  - { state: "latest", name: "squashfs" }
-  - { state: "latest", name: "snapd" }
+- hosts: all
+  remote_user: root
+  become: true
+  tasks:
+    - name: start service
+      service:
+        name: "{{ item.name }}"
+        state: "started"
+      loop:
+        - { name: "snapd" }
+        - { name: "snapd.socket" }
+      changed_when: false
+      ignore_errors: true
+
+    - name: snap version
+      command: snap version
+      register: result
+      changed_when: result is not succeeded
