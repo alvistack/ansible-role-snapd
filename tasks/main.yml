@@ -50,11 +50,8 @@
 
 - name: enable service
   service:
-    name: "{{ item.name }}"
+    name: "snapd"
     enabled: true
-  loop:
-    - { name: "snapd" }
-    - { name: "snapd.socket" }
   changed_when: false
   ignore_errors: true
   tags: snapd

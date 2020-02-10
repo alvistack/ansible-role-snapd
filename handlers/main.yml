@@ -15,12 +15,9 @@
 # limitations under the License.
 
 - name: snapd | systemctl restart
-  shell: |
-    set -o pipefail
-    systemctl restart snapd
-    systemctl restart snapd.socket
-  args:
-    executable: "/bin/bash"
+  service:
+    name: "snapd"
+    state: "restarted"
   loop: "{{ ansible_play_hosts }}"
   delegate_to: "{{ item }}"
   run_once: true
