@@ -48,6 +48,10 @@
   ignore_errors: true
   tags: snapd
 
+- name: flush handlers
+  meta: flush_handlers
+  tags: snapd
+
 - name: enable service
   service:
     name: "snapd"
@@ -55,8 +59,4 @@
     enabled: true
   changed_when: false
   ignore_errors: true
-  tags: snapd
-
-- name: flush handlers
-  meta: flush_handlers
   tags: snapd
