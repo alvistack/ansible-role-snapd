@@ -19,22 +19,3 @@
   become: true
   roles:
     - role: snapd
-
-- hosts: all
-  remote_user: root
-  become: true
-  tasks:
-    - name: start service
-      service:
-        name: "{{ item.name }}"
-        state: "started"
-      loop:
-        - { name: "snapd" }
-        - { name: "snapd.socket" }
-      changed_when: false
-      ignore_errors: true
-
-    - name: snap version
-      command: snap version
-      register: result
-      changed_when: result is not succeeded
