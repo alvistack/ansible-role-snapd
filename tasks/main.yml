@@ -52,7 +52,7 @@
   meta: flush_handlers
   tags: snapd
 
-- name: enable service
+- name: start service
   service:
     name: "snapd"
     state: "started"
