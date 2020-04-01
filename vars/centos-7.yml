@@ -19,6 +19,4 @@ _yum_repository:
     state: "latest"
 
 _yum:
-  - { state: "latest", name: "fuse" }
-  - { state: "latest", name: "squashfuse" }
   - { state: "latest", name: "snapd" }
