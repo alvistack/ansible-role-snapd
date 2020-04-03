@@ -1,6 +1,6 @@
 # Ansible Role for Snapd
 
-[![Travis](https://img.shields.io/travis/alvistack/ansible-role-snapd.svg)](https://travis-ci.org/alvistack/ansible-role-snapd)
+[![Travis](https://img.shields.io/travis/com/alvistack/ansible-role-snapd.svg)](https://travis-ci.com/alvistack/ansible-role-snapd)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-snapd.svg)](https://github.com/alvistack/ansible-role-snapd)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-snapd.svg)](https://github.com/alvistack/ansible-role-snapd/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.snapd-blue.svg)](https://galaxy.ansible.com/alvistack/snapd)
