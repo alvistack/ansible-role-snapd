@@ -35,3 +35,13 @@
   notify:
     - snapd | systemctl restart
   tags: snapd
+
+- name: symlink files
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    force: "{{ item.force | default(true) }}"
+    state: "{{ item.state | default('link') }}"
+  loop:
+    - { src: "/var/lib/snapd/snap", dest: "/snap" }
+  tags: snapd
