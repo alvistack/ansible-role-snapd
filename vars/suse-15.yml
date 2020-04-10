@@ -20,4 +20,6 @@ _zypper_repository:
     state: "present"
 
 _zypper:
+  - { state: "latest", name: "fuse" }
+  - { state: "latest", name: "squashfs" }
   - { state: "latest", name: "snapd" }
