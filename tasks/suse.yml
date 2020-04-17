@@ -38,5 +38,5 @@
   register: result
   until: result is succeeded
   notify:
-    - snapd | systemctl restart
+    - snapd | systemctl restart snapd
   tags: snapd
