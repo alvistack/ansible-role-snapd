@@ -52,7 +52,7 @@
   meta: flush_handlers
   tags: snapd
 
-- name: start service
+- name: systemctl start snapd
   service:
     name: "snapd"
     state: "started"
