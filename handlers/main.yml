@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: snapd | systemctl restart
+- name: snapd | systemctl restart snapd
   service:
     name: "snapd"
     state: "restarted"
