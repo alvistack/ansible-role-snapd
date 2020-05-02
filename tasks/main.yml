@@ -48,6 +48,12 @@
   ignore_errors: true
   tags: snapd
 
+- name: snap install core
+  snap:
+    name: "core"
+    state: "present"
+  tags: snapd
+
 - name: systemctl start snapd
   service:
     name: "snapd"
